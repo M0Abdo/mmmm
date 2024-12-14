@@ -10,7 +10,7 @@ app = FastAPI()
 
 # Load the AI model and labels
 model = load_model("Model/keras_model.h5")
-with open("Model/labels.txt", "r") as f:
+with open("labels.txt", "r") as f:
     labels = [line.strip() for line in f.readlines()]
 
 @app.get("/")
